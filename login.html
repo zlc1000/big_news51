@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录页面</title>
+    <!-- 引入 layui 的css -->
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+    <link rel="stylesheet" href="/assets/css/login.css" />
+</head>
+<!-- 
+    tips: 
+    1、在文件夹中单机右键没有使用vs工具打开的选项的同学，把vs重新安装一下，安装期间勾选复选框
+    2、用vs打开项目的时候，不要打开太多文件夹
+    3、Live Server 小型服务器，打开的时候会默认占用 5500 端口
+        http://127.0.0.1/ ip地址很特殊，表示是自己本地
+        http://localhost 域名的形式，表示是自己本地
+        http://192.168.37.201 本机的ip地址，也表示自己本地（查看本地ip地址的方式：ipconfig /all - [首选]）
+        http://0.0.0.0/ 表示本地回环地址，也表示是自己本地
+    如果想访问你同桌的网页效果的话，你可以把他的ip和端口拿过来就可以了（你们俩的网络得在同一个号段）（保证同处于一个局域网内）
+    4、wrapper 包裹的意思、具有包裹性质的容器
+-->
+
+<body>
+    <div class="layui-main">
+        <img src="/assets/images/logo.png" />
+    </div>
+    <div class="login-reg-box">
+        <!-- 登录、注册框的标题区域 -->
+        <h4>
+            <img src="/assets/images/login_title.png" />
+        </h4>
+        <!-- 登录、注册的表单区域 -->
+        <div class="login-wrap">
+            <a href="javascript:;" id="go2Reg">去注册</a>
+        </div>
+        <div class="reg-wrap">
+            <a href="javascript:;" id="go2Login">去登录</a>
+        </div>
+    </div>
+
+    <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>

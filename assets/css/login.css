@@ -1,0 +1,44 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* height: 100%;
+  width: 100%; */
+}
+
+html,
+body {
+  /* height: 100%; */
+  /* 高度设为100vh，可以占满整个屏幕 */
+  height: 100vh;
+  background-image: url('/assets/images/login_bg.jpg');
+  /* cover contain 区别？ */
+  /* cover 以短边为准 */
+  /* contain 以长边为准 */
+  background-size: cover;
+}
+
+.login-reg-box {
+  width: 400px;
+  height: 320px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 3px;
+}
+
+.login-reg-box h4 {
+  height: 60px;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  text-align: center;
+  line-height: 60px;
+}
+
+.reg-wrap {
+  display: none;
+}
