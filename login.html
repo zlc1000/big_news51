@@ -34,14 +34,49 @@
         </h4>
         <!-- 登录、注册的表单区域 -->
         <div class="login-wrap">
-            <a href="javascript:;" id="go2Reg">去注册</a>
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid" lay-submit>登录</button>
+                </div>
+                <div class="layui-form-item">
+                    <a href="javascript:;" id="go2Reg">去注册</a>
+                </div>
+            </form>
         </div>
         <div class="reg-wrap">
-            <a href="javascript:;" id="go2Login">去登录</a>
+            <form class="layui-form" action="">
+                <div class="layui-form-item">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入用户名"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <input type="text" name="title" required lay-verify="required" placeholder="请再次输入密码"
+                        autocomplete="off" class="layui-input">
+                </div>
+                <div class="layui-form-item">
+                    <button class="layui-btn layui-btn-fluid" lay-submit>注册</button>
+                </div>
+                <div class="layui-form-item">
+                    <a href="javascript:;" id="go2Login">去登录</a>
+                </div>
+            </form>
         </div>
     </div>
 
     <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/js/login.js"></script>
 </body>
 

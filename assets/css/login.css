@@ -42,3 +42,12 @@ body {
 .reg-wrap {
   display: none;
 }
+
+.layui-form {
+  padding: 20px;
+}
+
+.layui-form:nth-last-child(1) {
+  text-align: right;
+  font-size: 13px;
+}
