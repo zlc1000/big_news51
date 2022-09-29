@@ -34,18 +34,18 @@
         </h4>
         <!-- 登录、注册的表单区域 -->
         <div class="login-wrap">
-            <form class="layui-form" action="">
+            <form class="layui-form" id="formLogin">
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-username"></i>
                     <!-- 需要使用 lay-verify 属性进行添加校验规则   如果有多个校验规则的话需要可以通过 | 隔开 -->
                     <!-- 原生input输入框本身就有 required 属性，就表示此输入框是一个必填项 -->
                     <input type="text" name="username" required lay-verify="required" placeholder="请输入用户名"
-                        autocomplete="off" class="layui-input">
+                        autocomplete="off" class="layui-input" value="qd51">
                 </div>
                 <div class="layui-form-item">
                     <i class="layui-icon layui-icon-password"></i>
                     <input type="password" name="password" required lay-verify="required|pwd" placeholder="请输入密码"
-                        autocomplete="off" class="layui-input">
+                        autocomplete="off" class="layui-input" value="qd51qd51">
                 </div>
                 <div class="layui-form-item">
                     <button class="layui-btn layui-btn-normal layui-btn-fluid" lay-submit id="loginBtn">登录</button>
@@ -84,8 +84,11 @@
 
     <script src="/assets/lib/layui/layui.all.js"></script>
     <script src="/assets/lib/jquery.js"></script>
+    <script src="/assets/js/baseApi.js"></script>
     <script src="/assets/js/login.js"></script>
-    <script>
+
+
+    <!-- <script>
         function format2Json(target) {
             target.split('&').reduce((prev, curr) => {
                 const kv = curr.split('=')
@@ -93,7 +96,7 @@
                 return prev
             }, {})
         }
-    </script>
+    </script> -->
 </body>
 
 </html>
