@@ -1,0 +1,15 @@
+.layui-footer {
+  text-align: center;
+  font-size: 14px;
+  background-color: #23262e !important;
+  color: #fff;
+}
+
+.iconfont,
+.layui-icon {
+  margin-right: 8px;
+}
+
+.layui-icon {
+    margin-left: 20px;
+}
