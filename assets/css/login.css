@@ -47,7 +47,23 @@ body {
   padding: 20px;
 }
 
+/* 取到最后一个 表单项 */
+/* flex */
 .layui-form:nth-last-child(1) {
   text-align: right;
   font-size: 13px;
+}
+
+.layui-form-item {
+  position: relative;
+}
+
+.layui-form-item i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.layui-form-item input {
+  padding-left: 30px;
 }
