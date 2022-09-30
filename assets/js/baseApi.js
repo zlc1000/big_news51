@@ -1,5 +1,4 @@
 // 每次发起真正的请求之后，都会经过的地方
-
 $.ajaxPrefilter(function (config) {
   // 将key=value形式的数据，转成json格式的字符串
   const format2Json = (source) => {

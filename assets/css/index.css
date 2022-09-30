@@ -11,5 +11,54 @@
 }
 
 .layui-icon {
-    margin-left: 20px;
+  margin-left: 20px;
+}
+
+.layui-body div {
+  height: 100%;
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.layui-body {
+  overflow: hidden;
+}
+
+/* css 权重：深度选择器 /deep/ >>> :deep(类名) > !important > 行内样式 > id选择器 > class类选择器 > 标签选择器 > 属性选择器 > * */
+a {
+  transition: none !important;
+}
+
+.user-box {
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+}
+
+.user-box .layui-nav-img {
+  width: 40px;
+  height: 40px;
+}
+
+.user-box .text-avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #cdcdcd;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.user-box .text {
+  font-size: 12px;
 }
