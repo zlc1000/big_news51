@@ -24,9 +24,9 @@ iframe {
   border: none;
 }
 
-/* .layui-body {
+.layui-body {
   overflow: hidden;
-} */
+}
 
 /* css 权重：深度选择器 /deep/ >>> :deep(类名) > !important > 行内样式 > id选择器 > class类选择器 > 标签选择器 > 属性选择器 > * */
 a {
