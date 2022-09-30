@@ -18,6 +18,28 @@ $.ajaxPrefilter(function (config) {
 
   // 统一设置请求的参数 - post 请求
   config.data = config.data && format2Json(config.data)
+
+  // 统一设置请求头（有条件的添加）
+  // 请求路径中有 /my 这样字符串的需要添加
+  // indexOf startsWith endsWith includes 包含，包括的意思
+  if (config.url.includes('/my')) {
+    // 经过调试，headers 属性是自定义的属性
+    config.headers = {
+      Authorization: localStorage.getItem('big_news_token') || ''
+    }
+  }
+
+  // 统一添加错误回调  或 complete 回调
+  config.error = function (err) {
+    if (
+      err.responseJSON?.code === 1 &&
+      err.responseJSON?.message === '身份认证失败！'
+    ) {
+      // 进次处的话，可以认为请求有误了
+      localStorage.clear()
+      location.href = '/login.html'
+    }
+  }
 })
 
 /**
