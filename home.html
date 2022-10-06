@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>首页123</title>
+    <title>大事件-首页</title>
     <!-- 引入 layui 的css -->
     <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
     <link rel="stylesheet" href="/assets/fonts/iconfont.css" />
@@ -27,7 +27,7 @@
                         <div class="text">欢迎 黑马**</div>
                     </div>
                     <dl class="layui-nav-child">
-                        <dd><a href="">基本信息</a></dd>
+                        <dd><a href="/user/user_info.html" target="abc">基本信息</a></dd>
                         <dd><a href="">更换头像</a></dd>
                         <dd><a href="">重置密码</a></dd>
                     </dl>
@@ -73,9 +73,12 @@
                         <a href="javascript:;">
                             <span class="iconfont icon-user"></span>个人中心</a>
                         <dl class="layui-nav-child">
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>基本信息</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>更换头像</a></dd>
-                            <dd><a href="javascript:;"><i class="layui-icon layui-icon-app"></i>重置密码</a></dd>
+                            <dd><a href="/user/user_info.html" target="abc"><i
+                                        class="layui-icon layui-icon-app"></i>基本信息</a></dd>
+                            <dd><a href="/user/user_avatar.html" target="abc"><i
+                                        class="layui-icon layui-icon-app"></i>更换头像</a></dd>
+                            <dd><a href="/user/user_pwd.html" target="abc"><i
+                                        class="layui-icon layui-icon-app"></i>重置密码</a></dd>
                         </dl>
                     </li>
                 </ul>
@@ -84,11 +87,9 @@
 
         <div class="layui-body">
             <!-- 内容主体区域 -->
-            <div style="padding: 15px;">
-                <!-- iframe 标签，给定 src 属性可以用来显示第三方的链接：https html 页面 -->
-                <!-- name 属性，就相当于给 iframe 起了一个名字，方便后期找到它 -->
-                <iframe name="abc" src="/home/dashboard.html"></iframe>
-            </div>
+            <!-- iframe 标签，给定 src 属性可以用来显示第三方的链接：https html 页面 -->
+            <!-- name 属性，就相当于给 iframe 起了一个名字，方便后期找到它 -->
+            <iframe name="abc" src="/home/dashboard.html"></iframe>
         </div>
 
         <div class="layui-footer">

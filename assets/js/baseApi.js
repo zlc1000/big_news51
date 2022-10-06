@@ -5,7 +5,8 @@ $.ajaxPrefilter(function (config) {
     let target = {}
     source.split('&').forEach((el) => {
       let kv = el.split('=')
-      target[kv[0]] = kv[1]
+      // 需要对value进行解码操作
+      target[kv[0]] = decodeURIComponent(kv[1])
     })
     return JSON.stringify(target)
   }
@@ -14,7 +15,7 @@ $.ajaxPrefilter(function (config) {
   config.url = 'http://big-event-vue-api-t.itheima.net' + config.url
 
   // 统一设置请求头 Content-Type 值
-  config.contentType = 'application/json'
+  config.contentType = 'application/json;charset=utf-8'
 
   // 统一设置请求的参数 - post 请求
   config.data = config.data && format2Json(config.data)
@@ -48,4 +49,6 @@ $.ajaxPrefilter(function (config) {
  * home分支: git add .  -> git commit -m '完成了登录和注册功能' -> git push
  * git checkout mater -> git merge home -> git push
  * git checkout -b index -> 再继续开发首页的功能就好了
+ *
+ * 国庆假期是特别好弯道超车的机会（坐车，开车，注意安全 疫情注意防护）
  */
