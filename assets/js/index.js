@@ -22,9 +22,10 @@ function getUserInfo() {
 }
 
 const renderAvatar = (res) => {
-  if (res.user_pic) {
+  if (res.data.user_pic) {
     $('.text-avatar').hide()
-    $('.user-box img').css('src', res.user_pic).show()
+    // attr prop 适用于对属性的操作
+    $('.user-box img').attr('src', res.data.user_pic).show()
   } else {
     $('.layui-nav-img').hide()
     // 显示文字头像，取username属性的第一个字母
@@ -70,3 +71,11 @@ $('#btnLogout').on('click', function () {
 // 获取用户信息，报错状态码 401，就是token问题（要么你没给，要么就是过期了）
 
 // 首页是已经处于登录状态的人，才能够访问到的（权限）
+
+// 1007反馈
+
+// 你要对需求很清楚，可以用中文列一下123,几步
+// 群里已经发了，下课再接收
+// 没怎么动（不到50%）（遇到放假，昨天核酸）
+// 转转 - 企业微信找一下，扣个1 就好了（不要不好意思）
+
