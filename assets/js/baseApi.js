@@ -8,6 +8,7 @@ $.ajaxPrefilter(function (config) {
       // 需要对value进行解码操作
       target[kv[0]] = decodeURIComponent(kv[1])
     })
+    // 统一的将数据处理成json格式的字符串
     return JSON.stringify(target)
   }
 

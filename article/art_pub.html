@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/lib/layui/css/layui.css" />
+    <link rel="stylesheet" href="/assets/lib/cropper/cropper.css" />
+    <link rel="stylesheet" href="/assets/css/art_pub.css" />
+</head>
+
+<body>
+    <div class="layui-card">
+        <div class="layui-card-header">发布文章</div>
+        <div class="layui-card-body">
+            <!-- 表单: 输入框、下拉选择框、富文本编辑器、上传文章封面、按钮(存为草稿，发布) -->
+            <form class="layui-form" id="formPub">
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章标题：</label>
+                    <div class="layui-input-block">
+                        <input type="text" name="title" required lay-verify="required" placeholder="请输入文本标题"
+                            autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <label class="layui-form-label">文章类别：</label>
+                    <div class="layui-input-block">
+                        <select name="cate_id" lay-verify="required">
+                        </select>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- 左侧的 label -->
+                    <label class="layui-form-label">文章内容：</label>
+                    <!-- 为富文本编辑器外部的容器设置高度 -->
+                    <div class="layui-input-block" style="height: 400px;">
+                        <!-- 重要：将来这个 textarea 会被初始化为富文本编辑器 -->
+                        <textarea name="content"></textarea>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <!-- 左侧的 label -->
+                    <label class="layui-form-label">文章封面</label>
+                    <!-- 选择封面区域 -->
+                    <div class="layui-input-block cover-box">
+                        <!-- 左侧裁剪区域 -->
+                        <div class="cover-left">
+                            <img id="image" src="/assets/images/sample2.jpg" alt="" />
+                        </div>
+                        <!-- 右侧预览区域和选择封面区域 -->
+                        <div class="cover-right">
+                            <!-- 预览的区域 -->
+                            <div class="img-preview"></div>
+                            <!-- 选择封面按钮 -->
+                            <button type="button" class="layui-btn layui-btn-danger" id="btnPub">选择封面</button>
+                            <!-- 文件选择框 -->
+                            <input type="file" id="file" accept="image/png,image/jpeg" />
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <button class="layui-btn" lay-submit id="btnSave1">发布</button>
+                        <button class="layui-btn layui-btn-primary" lay-submit id="btnSave2">存为草稿</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- 文章分类的模板 -->
+        <script type="text/html" id="tpl-cate">
+            <option value="">所有分类</option>
+            {{each data}}
+            <option value="{{$value.id}}">{{ $value.cate_name }}</option>
+            {{/each}}
+        </script>
+    </div>
+    <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
+    <!-- min.js -->
+    <script src="/assets/lib/tinymce/tinymce.min.js"></script>
+    <!-- setup 入口的意思 -->
+    <script src="/assets/lib/tinymce/tinymce_setup.js"></script>
+    <script src="/assets/lib/cropper/Cropper.js"></script>
+    <script src="/assets/lib/cropper/jquery-cropper.js"></script>
+    <script src="/assets/lib/template-web.js"></script>
+    <!-- <script src="/assets/js/baseApi.js"></script> -->
+    <script src="/assets/js/art_pub.js"></script>
+</body>
+
+</html>
